@@ -1,0 +1,10 @@
+ceosal <- read.table("C:/Users/kaihu/Desktop/Quantitative Finance/Econometrics/Homework/Homework2/Dataset/ceosal2.txt",header = TRUE)
+View(ceosal)
+result <- lm(ceosal$LSALARY~ceosal$LSALES+ceosal$LMKTVAL)
+result
+summary(result)
+result2 <- lm(ceosal$LSALARY~ceosal$LSALES+ceosal$LMKTVAL+ceosal$PROFITS)
+summary(result2)
+result3 <- lm(ceosal$LSALARY~ceosal$LSALES+ceosal$LMKTVAL+ceosal$PROFITS+ceosal$CEOTEN)
+summary(result3)
+cor(ceosal$LMKTVAL,ceosal$PROFITS)
